@@ -1,0 +1,57 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+> **Referencia obligatoria:**
+> - El seguimiento de funcionalidades, prioridades y alcance debe basarse en los sprints documentados en [sprint.txt](mdc:sprint.txt).
+> - El diseño y las validaciones de entidades deben alinearse siempre con el modelo de datos definido en [schema.prisma](mdc:prisma/schema.prisma).
+
+## Estructura general
+- El proyecto sigue una arquitectura modular por dominio (inventario, producción, comercial, etc.).
+- Cada módulo contiene: controllers, services, repositories, models, schemas y rutas.
+- La lógica de negocio está en los servicios, el acceso a datos en los repositorios y la validación en los schemas.
+
+## Nombres y estilo
+- Todos los nombres de variables, métodos y clases deben estar en inglés y usar camelCase.
+- Los mensajes de logs siempre deben estar en inglés.
+- Usa TypeScript con tipado estricto.
+- Sigue las reglas de ESLint y Prettier del proyecto.
+
+## Principios de desarrollo
+- Aplica principios SOLID y Clean Code.
+- Prioriza la separación de responsabilidades y la modularidad.
+- Prefiere objetos y polimorfismo sobre condicionales extensos.
+- Mantén el código legible, mantenible y eficiente.
+
+## Backend (Node.js, Hono, Prisma)
+- Organiza el código en módulos reutilizables.
+- Usa async/await para el manejo asíncrono.
+- Los controladores solo orquestan, no contienen lógica de negocio.
+- Los servicios implementan la lógica de negocio y validan reglas de dominio.
+- Los repositorios encapsulan el acceso a la base de datos (Prisma).
+- Los schemas (Zod) validan la entrada y salida de datos.
+- Los endpoints deben validar y sanitizar toda la entrada del usuario.
+- Los errores deben manejarse con clases personalizadas y middleware global.
+
+## Inventario
+- Toda modificación de stock debe registrarse como un movimiento de inventario.
+- Los movimientos pueden ser de entrada, salida o ajuste.
+- El stock de materias primas y productos terminados debe ser consistente con los movimientos registrados.
+- Los reportes y dashboard de inventario deben usar los servicios y repositorios, nunca acceder directo a la base de datos.
+
+## Producción
+- Las órdenes de producción siguen un ciclo de vida: Programada → En Preparación → En Proceso → Pausada/Finalizada/Cancelada.
+- Solo se puede crear un lote de fabricación cuando la orden está en estado válido (En Proceso).
+- Los consumos de materia prima y movimientos de inventario deben estar ligados a los lotes de fabricación.
+- Los cambios de estado de las órdenes deben validarse según las reglas de transición.
+- Toda acción relevante debe dejar registro en el historial de estados.
+
+## Buenas prácticas
+- Documenta los endpoints y servicios con comentarios claros.
+- Usa logs informativos para operaciones clave y errores.
+- Escribe tests unitarios para servicios y lógica de negocio crítica.
+- Mantén este archivo actualizado ante cambios relevantes en la arquitectura o reglas del proyecto.
+
+

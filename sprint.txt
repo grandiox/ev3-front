@@ -1,0 +1,380 @@
+# Documentación Completa de Sprints - Sistema de Gestión Cervecera
+
+## Sprint 0: Preparación
+
+### Información General
+- **Nombre del Sprint:** Sprint 0: Preparación
+- **Fecha Inicio:** 1 de mayo 2025
+- **Participantes:** Diego (Desarrollador Senior), Daniel (Desarrollador Junior), Mauricio (Soporte Técnico)
+
+### Objetivos
+- Configurar entornos de desarrollo y herramientas del proyecto
+- Establecer arquitectura técnica y estándares de código
+- Preparar la planificación detallada para el Sprint 1
+
+### Historia de Usuario S0-HU1
+**Como** miembro del equipo  
+**Necesito** un entorno de desarrollo configurado y documentado  
+**Para** poder comenzar a trabajar en el proyecto de manera efectiva  
+
+**Criterio de Aceptación:** El entorno debe incluir repositorio de código, herramientas de gestión, base de datos configurada y documentación técnica inicial.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 1 | Definir arquitectura técnica del sistema | Diego | Documento de arquitectura que incluya patrones, frameworks, estructura de componentes y justificación técnica |
+| 2 | Configurar repositorio y entorno de desarrollo | Daniel | Repositorio Git funcional con estructura de directorios y configuración de herramientas de gestión |
+| 3 | Crear estructura inicial de base de datos | Diego | Script SQL con definición de tablas según modelo de datos, incluyendo relaciones y restricciones |
+| 4 | Establecer estándares de codificación | Diego | Documento con convenciones de nomenclatura, patrones y prácticas a seguir en el desarrollo |
+
+### Historia de Usuario S0-HU2
+**Como** equipo de desarrollo  
+**Necesito** establecer procesos de trabajo y documentación  
+**Para** garantizar la calidad del proyecto  
+
+**Criterio de Aceptación:** Procesos documentados, plantillas establecidas y estrategia de pruebas definida.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 5 | Documentar flujos de trabajo y procesos | Mauricio | Manual con descripción detallada de flujos de trabajo, incluyendo diagramas y plantillas |
+| 6 | Establecer protocolos de prueba | Mauricio | Documento con estrategia de pruebas, tipos de pruebas a realizar y criterios de calidad |
+| 7 | Capacitar al equipo en tecnologías del proyecto | Diego | Sesión de capacitación realizada y material de referencia disponible para el equipo |
+| 8 | Planificación detallada del Sprint 1 | Todos | Backlog del Sprint 1 con historias de usuario, tareas y estimaciones definidas |
+
+### Reuniones Diarias (Logros)
+| Fecha | Logro | Observaciones |
+|---|---|---|
+| 02/05/2025 | Arquitectura técnica definida | Se eligió arquitectura de capas con patrones Repository y Service |
+| 05/05/2025 | Uso Masivo de JIRA | Se capacitó y coordinó el uso de JIRA para seguimiento |
+| 06/05/2025 | Planificación Sprint 1 | Se conversó, refinó y planificó sprint 1 |
+
+### Retrospectiva
+**Lo que salió bien:**
+- Buena comunicación del equipo
+- La definición de arquitectura fue clara y consensuada
+- Se logró la configuración de herramientas en el tiempo previsto
+
+**Lo que se puede mejorar:**
+- Gestionar accesos con mayor anticipación
+- Detallar más las estimaciones
+- Mejorar la documentación técnica
+
+**Acciones para siguiente sprint:**
+- Realizar sesiones de programación en parejas
+- Establecer revisiones diarias de 15 minutos
+
+---
+
+## Sprint 1: Módulo de Gestión de Inventarios
+
+### Información General
+- **Nombre del Sprint:** Sprint 1: Módulo de Gestión de Inventarios
+- **Fecha Inicio:** 8 de mayo 2025
+- **Participantes:** Diego (Desarrollador Senior), Daniel (Desarrollador Junior), Mauricio (Soporte Técnico)
+
+### Objetivos
+- Implementar gestión básica de materias primas
+- Desarrollar control de productos terminados
+- Implementar sistema de alertas para inventario
+
+### Historia de Usuario S1-HU1
+**Como** encargado de bodega  
+**Necesito** registrar y actualizar información de materias primas  
+**Para** mantener un inventario preciso  
+
+**Criterio de Aceptación:** Poder crear, editar, ver y dar de baja materias primas con toda su información relevante (código, nombre, tipo, stock, caducidad, ubicación).
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 1 | Implementar entidades y repositorios de materias primas | Diego | Clases y métodos de persistencia funcionando, con pruebas unitarias |
+| 2 | Desarrollar servicios para gestión de materias primas | Diego | Servicios implementados que permitan CRUD completo con validaciones |
+| 3 | Crear interfaz de usuario para gestión de materias primas | Daniel | Formularios funcionales para crear, editar, ver y eliminar materias primas |
+| 4 | Implementar validación y manejo de errores | Daniel | Validación de campos obligatorios y mensajes de error informativos |
+
+### Historia de Usuario S1-HU2
+**Como** encargado de bodega  
+**Necesito** gestionar los lotes de materias primas  
+**Para** mantener trazabilidad y control de caducidad  
+
+**Criterio de Aceptación:** Poder registrar lotes con proveedor, fecha de recepción, fecha de caducidad y manejar su disponibilidad.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 5 | Implementar entidades y repositorios de lotes | Diego | Modelo de datos y métodos de persistencia para lotes implementados |
+| 6 | Desarrollar servicios para gestión de lotes | Diego | Servicios que permitan operaciones CRUD y verificación de caducidad |
+| 7 | Crear interfaz de usuario para gestión de lotes | Daniel | Formularios para registro y consulta de lotes con filtros |
+| 8 | Implementar visualización y reportes de lotes | Daniel | Informe de lotes por materia prima y alertas de caducidad |
+
+### Historia de Usuario S1-HU3
+**Como** maestro cervecero  
+**Necesito** registrar y consultar productos terminados  
+**Para** controlar el inventario disponible  
+
+**Criterio de Aceptación:** Interfaz que permita crear productos con sus características, consultar existencias y generar reportes de stock.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 9 | Implementar entidades y repositorios de productos | Diego | Modelo implementado con métodos de persistencia y pruebas |
+| 10 | Desarrollar servicios para gestión de productos | Diego | Servicios CRUD completos con validaciones de negocio |
+| 11 | Crear interfaz de usuario para productos terminados | Daniel | Formularios funcionales para CRUD de productos |
+| 12 | Implementar alertas de nivel mínimo de stock | Diego | Sistema de notificación cuando productos bajen del umbral mínimo |
+
+### Historia de Usuario S1-HU4
+**Como** encargado de bodega  
+**Necesito** registrar movimientos de inventario  
+**Para** mantener control de entradas y salidas  
+
+**Criterio de Aceptación:** Sistema que permita documentar todos los movimientos de inventario con su tipo, cantidad, responsable y motivo.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 13 | Implementar registro de movimientos | Daniel | Modelo de datos y función de persistencia para movimientos |
+| 14 | Desarrollar servicios para gestión de movimientos | Diego | API para crear movimientos y actualizar stocks automáticamente |
+| 15 | Crear interfaz de registro de movimientos | Daniel | Formulario usable para documentar movimientos con validación |
+| 16 | Implementar consulta y reportes de movimientos | Daniel | Pantalla de consulta con filtros y exportación a Excel |
+
+### Historia de Usuario S1-HU5
+**Como** gerente  
+**Necesito** reportes del estado de inventario  
+**Para** tomar decisiones estratégicas  
+
+**Criterio de Aceptación:** Dashboard con información actualizada de inventario y reportes exportables.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 17 | Implementar dashboard de inventario | Diego | Pantalla con indicadores clave de inventario actualizados en tiempo real |
+| 18 | Desarrollar reportes exportables | Daniel | Función para generar reportes en Excel y PDF |
+| 19 | Crear documentación de usuario | Mauricio | Manual con instrucciones paso a paso y capturas de pantalla |
+| 20 | Ejecutar pruebas funcionales completas | Mauricio | Plan de pruebas ejecutado con resultados documentados |
+
+---
+
+## Sprint 2: Módulo de Producción
+
+### Información General
+- **Nombre del Sprint:** Sprint 2: Módulo de Producción
+- **Fecha Inicio:** 22 de mayo 2025
+- **Participantes:** Diego (Desarrollador Senior), Daniel (Desarrollador Junior), Mauricio (Soporte Técnico)
+
+### Objetivos
+- Implementar gestión de recetas
+- Desarrollar funcionalidad de órdenes de producción
+- Integrar con el módulo de inventario
+
+### Historia de Usuario S2-HU1
+**Como** maestro cervecero  
+**Necesito** definir y mantener recetas de cervezas  
+**Para** estandarizar la producción  
+
+**Criterio de Aceptación:** Poder crear, editar y versionar recetas con ingredientes, cantidades, parámetros y procedimientos.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 1 | Diseñar e implementar modelo de datos para recetas | Diego | Estructura de datos que soporte recetas, versiones y detalles con ingredientes |
+| 2 | Desarrollar servicios para gestión de recetas | Diego | API completa para CRUD de recetas con versionamiento |
+| 3 | Implementar interfaz de creación de recetas | Daniel | Formulario intuitivo para definir recetas con ingredientes y parámetros |
+| 4 | Desarrollar visualización y consulta de recetas | Daniel | Interfaz para buscar, filtrar y visualizar recetas existentes |
+
+### Historia de Usuario S2-HU2
+**Como** maestro cervecero  
+**Necesito** planificar y registrar órdenes de producción  
+**Para** controlar el proceso productivo  
+
+**Criterio de Aceptación:** Sistema que permita programar producciones, asignar recetas, verificar disponibilidad de materias primas y registrar ejecución.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 5 | Implementar modelo de datos para órdenes de producción | Diego | Entidades y relaciones para órdenes, con estados y propiedades necesarias |
+| 6 | Desarrollar verificación de disponibilidad de materias primas | Diego | Función que valide existencias suficientes para la producción planificada |
+| 7 | Crear interfaz de planificación de producción | Daniel | Calendario y formularios para programar y gestionar órdenes |
+| 8 | Implementar seguimiento de estado de órdenes | Daniel | Panel de control que muestre estado actual de órdenes en curso |
+
+### Historia de Usuario S2-HU3
+**Como** operador de producción  
+**Necesito** registrar parámetros y eventos durante el proceso productivo  
+**Para** mantener control de calidad  
+
+**Criterio de Aceptación:** Interfaz para documentar mediciones, observaciones y parámetros durante cada etapa de la producción.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 9 | Implementar modelo para registro de parámetros | Diego | Estructura de datos flexible para diferentes tipos de parámetros y mediciones |
+| 10 | Desarrollar servicios para gestión de parámetros | Diego | API para crear, consultar y validar parámetros de proceso |
+| 11 | Crear interfaz de registro de parámetros | Daniel | Formularios adaptados a cada etapa del proceso productivo |
+| 12 | Implementar validación de rangos aceptables | Daniel | Sistema que alerte cuando parámetros estén fuera de rango |
+
+### Historia de Usuario S2-HU4
+**Como** maestro cervecero  
+**Necesito** registrar el resultado de cada lote de producción  
+**Para** mantener trazabilidad completa  
+
+**Criterio de Aceptación:** Sistema que permita documentar rendimiento, características y destino de cada lote producido.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 13 | Implementar modelo de lotes de fabricación | Diego | Entidades para lotes con vínculos a órdenes y productos resultantes |
+| 14 | Desarrollar integración con inventario | Diego | Mecanismo que actualice inventario al finalizar producción |
+| 15 | Crear interfaz de registro de resultados | Daniel | Formulario para documentar volumen, rendimiento y características |
+| 16 | Implementar trazabilidad de lotes | Daniel | Sistema que permita rastrear origen de materias primas por lote |
+
+### Historia de Usuario S2-HU5
+**Como** gerente  
+**Necesito** reportes de producción  
+**Para** evaluar eficiencia y rendimiento  
+
+**Criterio de Aceptación:** Informes que muestren producción por período, rendimiento por receta y utilización de capacidad.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 17 | Desarrollar cálculos de eficiencia | Diego | Algoritmos para determinar rendimiento vs esperado |
+| 18 | Implementar reportes de producción | Daniel | Pantallas con gráficos y tablas de indicadores clave |
+| 19 | Crear documentación de usuario | Mauricio | Manual completo con procedimientos y ejemplos |
+| 20 | Ejecutar pruebas integrales | Mauricio | Verificación de flujos completos y documentación de resultados |
+
+---
+
+## Sprint 3: Módulo de Gestión Comercial e Integración
+
+### Información General
+- **Nombre del Sprint:** Sprint 3: Módulo de Gestión Comercial e Integración
+- **Fecha Inicio:** 5 de junio 2025
+- **Participantes:** Diego (Desarrollador Senior), Daniel (Desarrollador Junior), Mauricio (Soporte Técnico)
+
+### Objetivos
+- Implementar gestión básica de clientes y ventas
+- Integrar todos los módulos del sistema
+- Preparar el sistema para implementación
+
+### Historia de Usuario S3-HU1
+**Como** vendedor  
+**Necesito** registrar y gestionar clientes  
+**Para** mantener relaciones comerciales efectivas  
+
+**Criterio de Aceptación:** Interfaz que permita crear, editar y consultar información completa de clientes.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 1 | Implementar modelo de datos para clientes | Diego | Entidades con toda la información requerida de clientes |
+| 2 | Desarrollar servicios para gestión de clientes | Diego | API completa para operaciones CRUD |
+| 3 | Crear interfaz de gestión de clientes | Daniel | Formularios y vistas para administración de clientes |
+| 4 | Implementar búsqueda y filtros de clientes | Daniel | Funcionalidad de búsqueda por múltiples criterios |
+
+### Historia de Usuario S3-HU2
+**Como** vendedor  
+**Necesito** registrar pedidos y ventas  
+**Para** controlar la operación comercial  
+
+**Criterio de Aceptación:** Sistema que permita crear pedidos, verificar disponibilidad y registrar ventas con detalle de productos.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 5 | Implementar modelo de datos para pedidos y ventas | Diego | Estructura que soporte pedidos, ventas y su relación |
+| 6 | Desarrollar verificación de disponibilidad | Diego | Función que verifique stock disponible al crear pedidos |
+| 7 | Crear interfaz de registro de pedidos | Daniel | Formulario intuitivo para crear pedidos con productos |
+| 8 | Implementar proceso de facturación básica | Daniel | Función para generar documentos de venta desde pedidos |
+
+### Historia de Usuario S3-HU3
+**Como** gerente  
+**Necesito** un dashboard integrado  
+**Para** visualizar KPIs clave de la operación  
+
+**Criterio de Aceptación:** Panel de control con indicadores de inventario, producción y ventas actualizado en tiempo real.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 9 | Diseñar dashboard integrado | Diego | Maqueta con layout e indicadores aprobada por cliente |
+| 10 | Implementar indicadores de inventario | Diego | Widgets con información actualizada de inventario |
+| 11 | Desarrollar indicadores de producción | Daniel | Componentes que muestren estado actual de producción |
+| 12 | Crear indicadores comerciales | Daniel | Gráficos y contadores de ventas y pedidos |
+
+### Historia de Usuario S3-HU4
+**Como** administrador del sistema  
+**Necesito** funcionalidades de configuración  
+**Para** adaptar el sistema a necesidades específicas  
+
+**Criterio de Aceptación:** Interfaz para gestionar usuarios, permisos y parámetros generales del sistema.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 13 | Implementar gestión de usuarios | Diego | Funcionalidad completa para administrar usuarios |
+| 14 | Desarrollar gestión de permisos | Diego | Sistema de roles y permisos flexible |
+| 15 | Crear interfaz de configuración | Daniel | Pantallas para ajustar parámetros del sistema |
+| 16 | Implementar auditoría de acciones | Diego | Registro de actividades importantes en el sistema |
+
+### Historia de Usuario S3-HU5
+**Como** usuario  
+**Necesito** documentación y ayuda integrada  
+**Para** utilizar efectivamente el sistema  
+
+**Criterio de Aceptación:** Sistema de ayuda contextual, manuales completos y guías de referencia rápida disponibles.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 17 | Crear manual de usuario completo | Mauricio | Documentación detallada con ejemplos e imágenes |
+| 18 | Implementar ayuda contextual | Mauricio | Sistema que muestre ayuda relevante en cada pantalla |
+| 19 | Desarrollar tutoriales interactivos | Mauricio | Guías paso a paso para procesos principales |
+| 20 | Preparar materiales de capacitación | Mauricio | Presentaciones y ejercicios para capacitación |
+
+---
+
+## Cierre: Implementación Final
+
+### Información General
+- **Nombre del Sprint:** Cierre: Implementación Final
+- **Fecha Inicio:** 12 de junio 2025
+- **Participantes:** Diego (Desarrollador Senior), Daniel (Desarrollador Junior), Mauricio (Soporte Técnico)
+
+### Objetivos
+- Implementar el sistema en producción
+- Realizar capacitación final a usuarios
+- Formalizar entrega del proyecto
+
+### Historia de Usuario C-HU1
+**Como** propietario  
+**Necesito** el sistema implementado en ambiente productivo  
+**Para** comenzar a utilizarlo formalmente  
+
+**Criterio de Aceptación:** Sistema funcionando correctamente en servidores de producción con datos iniciales cargados.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 1 | Desplegar sistema en servidores de producción | Diego | Aplicación funcionando en ambiente productivo con todas sus funcionalidades |
+| 2 | Migrar datos iniciales | Daniel | Información base cargada correctamente (productos, materias primas, clientes) |
+| 3 | Configurar seguridad y respaldos | Diego | Planificación de respaldos automáticos y seguridad implementada |
+| 4 | Verificar funcionamiento integral | Todos | Sistema validado en todos sus módulos en ambiente productivo |
+
+### Historia de Usuario C-HU2
+**Como** usuario  
+**Necesito** capacitación  
+**Para** utilizar efectivamente el nuevo sistema  
+
+**Criterio de Aceptación:** Usuarios capacitados y capaces de operar el sistema sin asistencia continua.
+
+| ID | Descripción de Tarea | Responsable | Criterios de Aceptación |
+|---|---|---|---|
+| 5 | Realizar capacitación a usuarios clave | Mauricio | Sesión de capacitación ejecutada con asistencia de usuarios clave |
+| 6 | Entregar documentación y manuales | Mauricio | Documentación completa entregada en formatos digital e impreso |
+| 7 | Configurar soporte post-implementación | Todos | Plan de soporte documentado y comunicado a usuarios |
+| 8 | Formalizar acta de entrega | Todos | Documento firmado que certifica la entrega satisfactoria del sistema |
+
+---
+
+## Resumen del Proyecto
+
+### Tecnologías y Arquitectura
+- **Arquitectura:** Capas con patrones Repository y Service
+- **Herramientas:** JIRA para seguimiento de tareas
+- **Base de datos:** Scripts SQL con tablas, relaciones y restricciones
+
+### Módulos del Sistema
+1. **Gestión de Inventarios:** Materias primas, productos terminados, lotes, movimientos y alertas
+2. **Producción:** Recetas, órdenes de producción, parámetros de proceso y trazabilidad
+3. **Gestión Comercial:** Clientes, pedidos, ventas y facturación básica
+4. **Dashboard Integrado:** KPIs de inventario, producción y ventas
+5. **Administración:** Usuarios, permisos y configuración del sistema
+
+### Entregables Finales
+- Sistema completo funcionando en producción
+- Documentación técnica y de usuario
+- Capacitación a usuarios
+- Plan de soporte post-implementación
+- Acta de entrega formalizada
